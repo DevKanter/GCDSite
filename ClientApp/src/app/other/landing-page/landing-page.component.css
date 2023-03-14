@@ -2,3 +2,15 @@
   .panel{
     background-color: black !important;
   }
+.container {
+    -ms-overflow-style: none;  /* Internet Explorer 10+ */
+    scrollbar-width: none;  /* Firefox */
+}
+.container::-webkit-scrollbar { 
+    display: none;  /* Safari and Chrome */
+}
+
+.poster{
+  max-width: -webkit-fill-available;
+
+}
