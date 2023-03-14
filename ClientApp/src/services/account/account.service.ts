@@ -4,7 +4,7 @@ import { AccountCharacterListComponent } from 'src/app/side-components/account/a
 import { AccountComponent } from '../../app/side-components/account/account.component';
 import { LoginComponent } from '../../app/side-components/login/login.component';
 import { RegisterComponent } from '../../app/side-components/register/register.component';
-import { AccountInfoRequest, AccountInfoResponse, CharacterListRequest, CharacterListResponse, UserLoginRequest, UserLoginResponse, UserLogoutRequest, UserLogoutResponse, UserRegisterRequest, UserRegisterResponse, WebsiteDBResult } from '../../models/Account';
+import { AccountInfoRequest, AccountInfoResponse, CharacterListRequest, CharacterListResponse, UserLoginRequest, UserLoginResponse, UserLogoutRequest, UserLogoutResponse, UserRegisterRequest, UserRegisterResponse } from '../../models/Account';
 import { RequestService } from '../request/RequestService';
 
 @Injectable({
@@ -139,8 +139,8 @@ export class AccountService {
     this._request.onLoginSuccess();
     
 }
-  private _onLoginFail(code:string) {
-    this._snackBar.open("Login failed! [" + WebsiteDBResult[code]+"]", "", { duration: 2000 });
+  private _onLoginFail(error:string) {
+    this._snackBar.open("Login failed! [" +error+"]", "", { duration: 2000 });
   }
 
   private _onLogoutSuccess() {

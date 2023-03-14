@@ -66,20 +66,6 @@ export class CharacterListEntry
     public level:number;
 }
 
-
-export enum WebsiteDBResult {
-  FAIL = -1,
-  SUCCESS,
-
-  REGISTER_ACCOUNT_ID_ALREADY_IN_USE, //FIX used in S_RegisterAccount
-  REGISTER_ACCOUNT_DATABASE_ERROR, //FIX used in S_RegisterAccount
-
-  REGISTER_ACCOUNT_ERROR_CREATING_GAME_ACCOUNT,
-  LOGIN_ACCOUNT_ID_NOT_FOUND,
-
-  ADD_PERMISSION_ALREADY_EXISTS,
-  ERROR_RETRIEVING_ACCOUNT_INFO,
-}
 export enum AccountType {
   NONE,
   SUPER_ADMIN,
