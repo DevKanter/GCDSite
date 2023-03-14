@@ -3,6 +3,7 @@ import { Injectable } from '@angular/core';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { CookieService } from 'ngx-cookie-service';
 import { Observable, throwError } from 'rxjs';
+import { environment } from 'src/environments/environment';
 import { UserLoginRequest, UserRegisterRequest, UserRegisterResponse } from '../../models/Account';
 import { RSAHelper } from '../helper/RSAHelper';
 
@@ -10,8 +11,7 @@ import { RSAHelper } from '../helper/RSAHelper';
   providedIn: 'root',
 })
 export class RequestService {
-  //private _baseURL = "https://localhost:7149";
-  private _baseURL = "http://92.246.89.60:5000";
+  private _baseURL = this.getBaseUrl();
   public headers = new HttpHeaders({ 'Content-Type': 'application/json', 'charset': 'utf-8' });
 
   private _lastLoginRequest;
@@ -49,5 +49,7 @@ export class RequestService {
     const data = { Data: encRequest };
     this._lastLoginRequest = data;
   }
-
+  private getBaseUrl(){
+    return environment.production ? "http://92.246.89.60:5000"  : "https://localhost:7149";
+  }
 }
