@@ -1,0 +1,44 @@
+<mat-card class="card">
+	<mat-card-header class="header">
+		<div class="subheading-2 title header-text">Cash</div>
+	</mat-card-header>
+	<mat-card-content class="content">
+		<div  fxLayout="row">
+			<div fxFlex="50%" fxLayout="column">
+				<mat-card class="card">
+					<mat-card-header class="header">
+						<div class="subheading-2 title header-text">Current Info</div>
+					</mat-card-header>
+					<mat-card-content class="content">
+						<p>My Cash <img src="assets/coins_stacked.png" style="border-radius:50%"> : {{cashAmount}} </p>
+					</mat-card-content>
+				</mat-card>
+			</div>
+			<mat-divider vertical="true" style="margin: 8px;"></mat-divider>
+			<div fxFlex="50%" fxLayout="column">
+				<mat-card class="card">
+					<mat-card-header class="header">
+						<div class="subheading-2 title header-text">Get More</div>
+					</mat-card-header>
+					<mat-card-content class="content">
+						<form [formGroup]="cashProductForm">
+							<mat-form-field fxFlex="grow">
+								<mat-placeholder >Select amount</mat-placeholder>
+									<mat-select  (selectionChange)="onCashProductSelect($event.value)" formControlName="cashProduct">
+										<div *ngFor="let cashProduct of cashProductList">
+											  <mat-option [value]="cashProduct" >
+												Buy {{ cashProduct.productName }} for {{cashProduct.price/100}}€
+											  </mat-option>
+											<mat-divider></mat-divider>
+										</div>
+									  </mat-select>
+							</mat-form-field>
+						</form>
+						<button mat-raised-button [disabled]="!cashProductForm.valid" (click)="onCheckoutStartRequest()">Checkout</button>
+					</mat-card-content>
+				</mat-card>
+			
+			</div>
+		</div>
+	</mat-card-content>
+</mat-card>

@@ -1,0 +1,12 @@
+<form [formGroup]="loginFormGroup" fxLayout="column" class="no-scroll-bar">
+	<mat-form-field class="custom-form-field">
+		<mat-label >Username</mat-label>
+		<input matInput formControlName="username">
+	</mat-form-field>
+	<mat-form-field class="custom-form-field" >
+		<mat-label >Password</mat-label>
+		<input matInput formControlName="password" [type]="hide ? 'password' : 'text'">
+		<mat-icon matSuffix (click)="hide = !hide" class="material-icons">{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+	</mat-form-field>
+	<button mat-raised-button [disabled]="!loginFormGroup.valid" (click)="onLoginBtnClick()">Login</button>
+</form>

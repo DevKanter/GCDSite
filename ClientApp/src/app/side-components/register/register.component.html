@@ -1,0 +1,21 @@
+				<form [formGroup]="registerFormGroup" fxLayout="column" class="no-scroll-bar">
+					<mat-form-field matTooltip="6-10 non-special characters">
+						<mat-label>Username</mat-label>
+						<input matInput maxlength="10" formControlName="username">
+					</mat-form-field>
+					<mat-form-field matTooltip="6-10 non-special characters">
+						<mat-label>Password</mat-label>
+						<input matInput maxlength="10" formControlName="password" [type]="hide ? 'password' : 'text'">
+						<mat-icon matSuffix (click)="hide = !hide" class="material-icons">{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+					</mat-form-field>
+					<mat-form-field>
+						<mat-label>Confirm Password</mat-label>
+						<input matInput maxlength="10" formControlName="passwordConfirm" [type]="hide ? 'password' : 'text'">
+						<mat-icon matSuffix (click)="hide = !hide" class="material-icons">{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+					</mat-form-field>
+					<mat-form-field>
+						<mat-label>Email</mat-label>
+						<input matInput formControlName="email">
+					</mat-form-field>
+					<button mat-raised-button [disabled]="!registerFormGroup.valid" (click)="onRegisterBtnClick()">Register</button>
+				</form>

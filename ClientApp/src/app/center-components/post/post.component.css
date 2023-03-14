@@ -1,0 +1,17 @@
+.card {
+  background-color: rgba(178,171,158,0.95) !important;
+  margin: 0 0 4px 0;
+}
+.material-icons {
+  font-family: 'Material Icons' !important;
+}
+::ng-deep.mat-bottom-sheet-container {
+    background-color:rgba(0,0,0,0); 
+  padding:0px!important;
+  margin-bottom: 25%;
+  overflow: hidden;
+}
+img {
+  border-radius: 50%;
+  margin-right: 8px;
+}

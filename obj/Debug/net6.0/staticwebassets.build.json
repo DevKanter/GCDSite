@@ -1,0 +1,37 @@
+{
+  "Version": 1,
+  "Hash": "w9wYUltCz2Ow5NrZgKEvPJpGPSLAUG0Spr6er5MxdVE=",
+  "Source": "GCDSite",
+  "BasePath": "_content/GCDSite",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [
+    {
+      "Name": "GCDSite\\wwwroot",
+      "Source": "GCDSite",
+      "ContentRoot": "C:\\Users\\Alex\\source\\repos\\GCDSite\\GCDSite\\wwwroot\\",
+      "BasePath": "_content/GCDSite",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": [
+    {
+      "Identity": "C:\\Users\\Alex\\source\\repos\\GCDSite\\GCDSite\\wwwroot\\favicon.ico",
+      "SourceId": "GCDSite",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Alex\\source\\repos\\GCDSite\\GCDSite\\wwwroot\\",
+      "BasePath": "_content/GCDSite",
+      "RelativePath": "favicon.ico",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\favicon.ico"
+    }
+  ]
+}

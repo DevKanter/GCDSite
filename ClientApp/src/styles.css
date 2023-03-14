@@ -1,0 +1,58 @@
+/* You can add global styles to this file, and also import other style files */
+@import '@angular/material/prebuilt-themes/deeppurple-amber.css';
+
+
+/* Provide sufficient contrast against white background */
+a {
+  color: #0366d6;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  min-height: 100%;
+  background-color: #282924;
+}
+
+code {
+  color: #e01a76;
+}
+.btn-primary {
+  color: #fff;
+  background-color: #1b6ec2;
+  border-color: #1861ac;
+}
+
+.color-background-header{
+    background:rgba(0,0,0,1);
+}
+.base-background-element {
+  background-image: url('assets/bg_visual.jpg');
+  min-height: 822px;
+  background-color: #282924;
+  background-repeat: no-repeat;
+}
+
+.header-text {
+  font-family: 'Noto Sans CJK KR';
+  color: #E60012;
+}
+.mat-grid-tile-content{
+    display:unset!important;
+    margin:8px;
+}
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+.footer {
+  position: fixed;
+  bottom: 0;
+  background-color:black!important;
+}
+
+.flexExpand {
+  flex: 1 1 auto;
+}

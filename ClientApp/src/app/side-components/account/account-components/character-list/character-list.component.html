@@ -1,0 +1,11 @@
+<mat-card class="card">
+	<mat-card-header class="header">
+		<div class="subheading-2 title header-text">Characters</div>
+	</mat-card-header>
+	<mat-card-content class="content">
+		<mat-accordion>
+			<app-character-entry *ngFor="let character of characters" [character]="character" ></app-character-entry>
+		</mat-accordion>
+		
+	</mat-card-content>
+</mat-card>

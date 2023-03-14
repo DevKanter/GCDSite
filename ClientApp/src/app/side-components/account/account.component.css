@@ -1,0 +1,64 @@
+.material-icons {
+  font-family: 'Material Icons' !important;
+}
+
+.card {
+  background-color: rgba(178,171,158,0.95) !important;
+  min-width: fit-content;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  height: 32px;
+  box-sizing: border-box;
+  border-bottom: solid 1px rgba(0,0,0,0.12);
+  color: rgba(0,0,0,0.6);
+  margin-top: 8px;
+  margin-bottom: 8px;
+}
+
+.title {
+  margin-right: auto;
+  font-weight: 800;
+  margin-bottom: 16px;
+}
+
+.logout-button {
+  width:100%;
+  background-color: rgb(158, 152, 140) !important;
+}
+
+
+/* .pannel-button-tl {
+  background-color: rgba(178,171,158,0.95);
+  width: 100% !important;
+  height: 100% !important;
+  border-radius: 0px !important;
+  margin:0 2px 2px 0;
+}
+.pannel-button-tr {
+  background-color: rgba(178,171,158,0.95);
+  width: 100% !important;
+  height: 100% !important;
+  border-radius: 0px !important;
+  margin:0 0 2px 2px
+}
+.pannel-button-bl {
+  background-color: rgba(178,171,158,0.95);
+  width: 100% !important;
+  height: 100% !important;
+  border-radius: 0px !important;
+  margin: 2px 2px 0 0;
+}
+.pannel-button-br {
+  background-color: rgba(178,171,158,0.95);
+  width: 100% !important;
+  height: 100% !important;
+  border-radius: 0px !important;
+  margin: 2px 0 0 2px;
+} */
+.content {
+  margin-top: 16px;
+  height: fit-content;
+}

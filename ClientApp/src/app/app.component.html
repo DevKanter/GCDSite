@@ -1,0 +1,27 @@
+<body>
+  <app-nav-menu></app-nav-menu>
+  <div class="base-background-element">
+	  <div fxLayout="row" fxLayoutGap="8px">
+		  <div fxFlex="5%"></div>
+		  <div fxLayout="column" fxFlex="15%">
+				  <div style="height:32px;"></div>
+				  <app-side></app-side>
+		  </div>
+		  <div fxFlex="60%">
+			  <div style="background-color:rgba(0,0,0,0); height:400px;">
+				  <div style="height:32px;"></div>
+				  <router-outlet></router-outlet>
+			  </div>
+		  </div>
+		  <div fxFlex="15%" ></div>
+		  <div fxFlex="5%"></div>
+	  </div>
+	</div>
+  <mat-toolbar color="primary" class="footer">
+		  <span class="flexExpand"></span>
+		  <div style="margin: 8px;"><a class="header-text" style="font-size:small" [routerLink]="['/thanks']"> Thank you page </a></div>
+		  <div style="margin: 8px;"><a class="header-text" style="font-size:small" [routerLink]="['/privacy']"> Privacy Policy </a></div>
+		  <div style="margin: 8px;"><a class="header-text" style="font-size:small" [routerLink]="['/terms']"> Terms of Service </a></div>
+		
+		</mat-toolbar>
+</body>

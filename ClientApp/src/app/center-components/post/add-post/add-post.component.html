@@ -1,0 +1,34 @@
+<mat-card class="card">
+	<mat-card-header class="header">
+		<div class="subheading-2 title header-text">Create Post</div>
+	</mat-card-header>
+	<mat-divider style="margin-top:16px;"></mat-divider>
+	<mat-card-content class="content" style="margin-top:32px">
+		<form [formGroup]="createPostGroup" fxLayout="column">
+			<mat-form-field>
+				<mat-label>Title</mat-label>
+				<input matInput formControlName="title">
+			</mat-form-field>
+			<mat-form-field>
+				<mat-label>Description</mat-label>
+				<input matInput formControlName="description">
+			</mat-form-field>
+			<mat-form-field>
+				<mat-label>Content</mat-label>
+				<textarea matInput
+							 formControlName="content"
+							 cdkTextareaAutosize
+							 #autosize="cdkTextareaAutosize"></textarea>
+			</mat-form-field>
+			<mat-label>Visibility</mat-label>
+			<mat-select formControlName="visibility">
+			  <mat-option *ngFor="let option of visibilityOptions" [value]="option.value">
+				{{option.key}}
+			  </mat-option>
+			</mat-select>
+			<mat-divider style="margin:8px;"></mat-divider>
+			<button (click)="createPostRequest()" [disabled]="!createPostGroup.valid" style="background-color: rgba(178,171,158,0.95) !important;" mat-raised-button>Confirm</button>
+		</form>
+
+	</mat-card-content>
+</mat-card>

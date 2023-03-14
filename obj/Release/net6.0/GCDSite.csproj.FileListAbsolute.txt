@@ -1,0 +1,2 @@
+C:\Users\Alex\source\repos\GCDSite\GCDSite\obj\Release\net6.0\GCDSite.csproj.AssemblyReference.cache
+C:\Users\Alex\source\repos\GCDSite\GCDSite\obj\Release\net6.0\spa.proxy.json

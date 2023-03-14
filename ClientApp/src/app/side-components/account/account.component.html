@@ -1,0 +1,55 @@
+<div>
+		<mat-card-header class="header">
+			<div class="subheading-2 title header-text">Account Info</div>
+		</mat-card-header>
+		<mat-card-content fxLayout="column" class="content">
+			<div fxLayout="row">
+				<p fxFlex="55%"><b>AccountType:</b></p><p fxFlex="45%"> {{displayAccountType}}</p>
+			</div>
+			<div fxLayout="row">
+				<p fxFlex="55%"><b> Nickname:</b></p><p fxFlex="45%">  {{accountInfo.nickname}}</p>
+			</div>
+
+			<mat-divider style="margin:8px;"></mat-divider>
+			<div fxFlex="100%" fxLayout="row" >
+				<button  style="background-color: rgba(0,0,0,0); border-width: 0px; border-radius: 25%;" fxFlex="25%">
+					<img matTooltip="Characters"
+						src={{charImgSrc}}
+						(mouseover)="charImgSrc = 'assets/characters_hover.png'"
+						(mouseout)="charImgSrc = 'assets/characters.png'"
+						(click)="onCharsButton()"
+					>
+				</button>
+				<button style="background-color: rgba(0,0,0,0); border-width: 0px; border-radius: 25%;" fxFlex="25%">
+					<img 
+						matTooltip="Account Information"
+						src={{infoImgSrc}}
+						(mouseover)="infoImgSrc = 'assets/account_info_hover.png'"
+						(mouseout)="infoImgSrc = 'assets/account_info.png'"
+						(click)="onInfoButton()"
+					>
+				</button>
+				<button style="background-color: rgba(0,0,0,0); border-width: 0px; border-radius: 25%;" fxFlex="25%">
+					<img 
+						matTooltip="Cash Shop"
+						src={{cashImgSrc}} 
+						(mouseover)="cashImgSrc = 'assets/cash_hover.png'"
+						(mouseout)="cashImgSrc = 'assets/cash.png'"
+						(click)="onCashButton()"
+					>
+				</button>
+				<button style="background-color: rgba(0,0,0,0); border-width: 0px; border-radius: 25%;" fxFlex="25%">
+					<img 
+						matTooltip="Settings"
+						src={{settingsImgSrc}} 
+						(mouseover)="settingsImgSrc = 'assets/settings_hover.png'"
+						(mouseout)="settingsImgSrc = 'assets/settings.png'"
+						(click)="onSettingsButton()"
+					>
+				</button>
+											
+			</div>
+			<mat-divider style="margin:8px;"></mat-divider>
+		</mat-card-content>
+	<button class="logout-button" mat-raised-button (click)="onLogoutBtnClick()">Logout</button>
+</div>

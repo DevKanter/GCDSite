@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "s7ek3OCZkU6ef35oc0W51HtxETFYzsnvk7E6j4Xus4uL1PqmcdnVWF4oBPv0aNB6qkdoN26Yus07S1Rve9X97w==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Alex\\source\\repos\\GCDSite\\GCDSite\\GCDSite.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Alex\\.nuget\\packages\\microsoft.aspnetcore.spaproxy\\6.0.10\\microsoft.aspnetcore.spaproxy.6.0.10.nupkg.sha512",
+    "C:\\Users\\Alex\\.nuget\\packages\\microsoft.typescript.msbuild\\4.9.4\\microsoft.typescript.msbuild.4.9.4.nupkg.sha512"
+  ],
+  "logs": []
+}

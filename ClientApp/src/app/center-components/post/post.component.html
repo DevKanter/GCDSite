@@ -1,0 +1,46 @@
+<mat-accordion>
+	<mat-expansion-panel class="card" *ngFor="let post of posts">
+		<mat-expansion-panel-header>
+			<mat-panel-title>
+				<img src={{postIcon}}>
+				[{{post.posted | date:'shortDate'}}] {{post.title}}
+			</mat-panel-title>
+			<mat-panel-description>
+				{{post.description}}
+			</mat-panel-description>
+		</mat-expansion-panel-header>
+		<mat-divider style="margin-bottom: 8px;"></mat-divider>
+		<div [innerHTML]="post.content" ></div>
+		<div fxLayout="row">
+			<span class="flexExpand"></span>
+			<button (click)="deleteRequest(post)" class="material-icons" style="background-color: rgb(158, 152, 140) !important;" mat-mini-fab *ngIf="accountService.loggedIn && accountService?.accountInfo?.accountType<=3">delete</button>
+
+			<button (click)="openEditPost(post)"  class="material-icons" style="background-color: rgb(158, 152, 140) !important;" mat-mini-fab *ngIf="accountService.loggedIn && accountService?.accountInfo?.accountType<=3">edit</button>
+		</div>
+	</mat-expansion-panel>
+	<mat-expansion-panel class="card" *ngFor="let post of devPosts">
+		<mat-expansion-panel-header>
+			<mat-panel-title>
+				DEV!!!   
+				<img src={{postIcon}}>
+				[{{post.posted | date:'shortDate'}}] {{post.title}}
+			</mat-panel-title>
+			<mat-panel-description>
+				{{post.description}}
+			</mat-panel-description>
+		</mat-expansion-panel-header>
+		<mat-divider style="margin-bottom: 8px;"></mat-divider>
+		<div [innerHTML]="post.content" ></div>
+		<div fxLayout="row">
+			<span class="flexExpand"></span>
+			<button (click)="deleteRequest(post)" class="material-icons" style="background-color: rgb(158, 152, 140) !important;" mat-mini-fab *ngIf="accountService.loggedIn && accountService?.accountInfo?.accountType<=3">delete</button>
+
+			<button (click)="openEditPost(post)"  class="material-icons" style="background-color: rgb(158, 152, 140) !important;" mat-mini-fab *ngIf="accountService.loggedIn && accountService?.accountInfo?.accountType<=3">edit</button>
+		</div>
+	</mat-expansion-panel>
+	<div fxLayout="row">
+		<span class="flexExpand"></span>
+
+		<button (click)="openCreatePost()" class="material-icons" style="background-color: rgb(158, 152, 140) !important;" *ngIf="accountService.loggedIn && accountService?.accountInfo?.accountType<=3" mat-mini-fab>add</button>
+	</div>
+</mat-accordion>
