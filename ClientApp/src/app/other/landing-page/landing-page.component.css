@@ -12,5 +12,6 @@
 
 .poster{
   max-width: -webkit-fill-available;
+  max-width: -moz-available;
 
 }

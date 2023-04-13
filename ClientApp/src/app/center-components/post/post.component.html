@@ -30,7 +30,7 @@
 			</mat-panel-description>
 		</mat-expansion-panel-header>
 		<mat-divider style="margin-bottom: 8px;"></mat-divider>
-		<div [innerHTML]="post.content" ></div>
+		<div  [innerHTML]="post.content" ></div>
 		<div fxLayout="row">
 			<span class="flexExpand"></span>
 			<button (click)="deleteRequest(post)" class="material-icons" style="background-color: rgb(158, 152, 140) !important;" mat-mini-fab *ngIf="accountService.loggedIn && accountService?.accountInfo?.accountType<=3">delete</button>

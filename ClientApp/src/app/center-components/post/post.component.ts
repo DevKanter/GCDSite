@@ -39,6 +39,9 @@ export class PostComponent implements OnInit {
       case PostCategory.PATCH:
         this.postIcon = "assets/patch.png";
         break;
+      case PostCategory.EVENT:
+        this.postIcon = "assets/event_post.png"
+        break;
       default:
         this.postIcon = "assets/server_info.png";
         break;
